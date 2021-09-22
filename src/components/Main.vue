@@ -1,9 +1,11 @@
 <template>
     <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
-            <div v-for="(album, index) in AlbumList" :key="index" class="col-6 col-md-2 m-2">
-                <!-- bisogna passargi 'info' con il v-bind per ciclare l'elemento Album -->
-                <Album :info="album"/>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div v-for="(album, index) in AlbumList" :key="index" class="col-6 col-md-2 m-2">
+                    <!-- bisogna passargi 'info' con il v-bind per ciclare l'elemento Album -->
+                    <Album :info="album"/>
+                </div>
             </div>
         </div>
     </div>
@@ -43,9 +45,14 @@ export default {
 
 <style scoped lang="scss" >
 @import '../styles/vars';
-.row {
+.container-fluid {
     background-color: $secundary;
-    padding: 50px;
 }
+
+.row {
+    padding: 50px 0;
+}
+
+
 
 </style>>

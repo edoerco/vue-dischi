@@ -21,12 +21,12 @@ export default {
 
 .album {
     background-color: $primary;
-    height: 320px;
+    height: 380px;
     padding: 20px;
     max-width: 200px;
 
     img {
-        max-width: 100px;
+        width: 100%;
     }
 
     h4 {
@@ -38,4 +38,6 @@ export default {
     }
 }
 
+// GRAZIE ALE <3
 </style>>
+
