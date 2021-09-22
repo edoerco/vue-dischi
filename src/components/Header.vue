@@ -1,8 +1,8 @@
 <template>
-  <header class="container">
-    <div class="row">
+  <header class="container-fluid">
+    <div class="row d-flex align-items-center">
       <div class="col">
-        <h1>ciao</h1>
+        <img src="../assets/spotify-icon.png" alt="">
       </div>
     </div>
  </header>
@@ -16,5 +16,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+// importiamo gli stili salvati nel file vars
+@import '../styles/vars';
 
+.row {
+  background-color: $primary;
+  height: 70px;
+
+  img {
+    width: 40px;
+  }
+}
 </style>

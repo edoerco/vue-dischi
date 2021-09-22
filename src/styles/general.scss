@@ -1,0 +1,36 @@
+//importiamo Bootstrap
+
+@import '~bootstrap/scss/bootstrap';
+
+// importiamo il file vars dove abbiamo stanziato il font
+@import './vars';
+
+
+// importiamo l'index.css perchè 'tiene le fila'
+@import '~@fontsource/montserrat/index.css';
+
+
+// importiamo 'tutte' le grandezze del font
+@import '~@fontsource/montserrat/100.css';
+@import '~@fontsource/montserrat/200.css';
+@import '~@fontsource/montserrat/300.css';
+@import '~@fontsource/montserrat/400.css';
+@import '~@fontsource/montserrat/500.css';
+@import '~@fontsource/montserrat/600.css';
+@import '~@fontsource/montserrat/700.css';
+@import '~@fontsource/montserrat/800.css';
+@import '~@fontsource/montserrat/900.css';
+
+
+
+body {
+    font-family: $main-font;
+}
+
+// eseguiamo il reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
