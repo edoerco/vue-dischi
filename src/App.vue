@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Main />
+    <Main @infoDisc="getInfoAlbum"/>
   </div>
 </template>
 
@@ -12,9 +12,22 @@ import Main from './components/Main.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      albumInfo: [],
+    }
+  },
+
   components: {
     Header,
     Main,
+  },
+  methods: {
+    getInfoAlbum(infoDischi) {
+      // console.log(infoDischi);
+      this.albumInfo = infoDischi;
+      console.log(this.albumInfo);
+    }
   }
 }
 </script>

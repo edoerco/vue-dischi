@@ -1,8 +1,17 @@
 <template>
   <header class="container-fluid">
     <div class="row d-flex align-items-center">
-      <div class="col">
+      <div class="col d-flex justify-content-between">
         <img src="../assets/spotify-icon.png" alt="">
+        <select name="album" id="album">
+            <option value="">Seleziona genere</option>
+            <option value="">Rock</option>
+            <option value="">Pop</option>
+            <option value="">Jazz</option>
+            <option value="">Metal</option>
+
+
+        </select>
       </div>
     </div>
  </header>
@@ -11,6 +20,7 @@
 <script>
 export default {
   name: 'Header',
+  props: ['infoAlbum']
 }
 </script>
 

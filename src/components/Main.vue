@@ -35,8 +35,9 @@ export default {
             axios
                  .get(this.APIUrl)
                  .then( res => {
-                     console.log(res.data.response);
+                    //  console.log(res.data.response);
                     this.AlbumList = res.data.response;
+                    this.$emit('infoDisc', this.AlbumList);
                  })         
         }
     }

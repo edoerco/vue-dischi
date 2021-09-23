@@ -1,11 +1,11 @@
 <template>
 <!-- creiamo la 'carta' contenente tutte le info dell'album -->
-  <div class="album text-center">
-      <img :src="info.poster" :alt="info.title">
-      <h4 class="my-4">{{info.title}}</h4>
-      <p class="m-0">{{info.author}}</p>
-      <p class="m-0">{{info.year}}</p>
-  </div>
+    <div class="album text-center">
+        <img :src="info.poster" :alt="info.title">
+        <h4 class="my-4">{{info.title}}</h4>
+        <p class="m-0">{{info.author}}</p>
+        <p class="m-0">{{info.year}}</p>
+    </div>
 </template>
 
 <script>
