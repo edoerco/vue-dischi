@@ -3,12 +3,10 @@
     <div class="row d-flex align-items-center">
       <div class="col d-flex justify-content-between">
         <img src="../assets/spotify-icon.png" alt="">
-        <select name="album" id="album">
+        <select v-model="selectedText" @change="$emit('selectedOption', selectedText)" name="album" id="album">
             <option value="">Seleziona genere</option>
-            <option value="">Rock</option>
-            <option value="">Pop</option>
-            <option value="">Jazz</option>
-            <option value="">Metal</option>
+            <option v-for="(genre, index) in genreAlbum" :key="index" :value="genre">{{genre}}</option>
+            
 
 
         </select>
@@ -20,7 +18,12 @@
 <script>
 export default {
   name: 'Header',
-  props: ['infoAlbum']
+  props: ['genreAlbum'],
+  data() {
+    return {
+      selectedText: '',
+    }
+  }
 }
 </script>
 

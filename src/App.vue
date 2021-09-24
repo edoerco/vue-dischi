@@ -1,7 +1,12 @@
 <template>
   <div>
-    <Header />
-    <Main @infoDisc="getInfoAlbum"/>
+    <Header 
+    :genreAlbum="albumGenre"
+    @selectedOption="getOption" />
+
+    <Main 
+    @genreDisc="getGenreAlbum"
+    :userOptionsAlbum="userOptions"/>
   </div>
 </template>
 
@@ -14,7 +19,8 @@ export default {
   name: 'App',
   data() {
     return {
-      albumInfo: [],
+      albumGenre: [],
+      userOptions: "",
     }
   },
 
@@ -23,12 +29,17 @@ export default {
     Main,
   },
   methods: {
-    getInfoAlbum(infoDischi) {
+    getGenreAlbum(genreDischi) {
       // console.log(infoDischi);
-      this.albumInfo = infoDischi;
-      console.log(this.albumInfo);
+      this.albumGenre = genreDischi;
+      // console.log(this.albumGenre)
+      // console.log(this.albumInfo);
+    },
+    getOption(text) {
+      this.userOptions = text
+      console.log(text)
     }
-  }
+  },
 }
 </script>
 
